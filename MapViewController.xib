@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController">
+            <connections>
+                <outlet property="anna" destination="FK2-wp-Dyy" id="FgY-wE-uZa"/>
+                <outlet property="claudio" destination="P7h-g0-Hyu" id="DQa-Yn-tXf"/>
+                <outlet property="enrico" destination="Guk-BN-08a" id="T1L-co-CwU"/>
+                <outlet property="giusi" destination="gbM-8P-bhT" id="aa4-Ys-mvt"/>
+                <outlet property="laura" destination="6Ds-oW-0WG" id="AYd-Xa-uCQ"/>
+                <outlet property="mapView" destination="Unz-gp-qJV" id="XJm-Az-0Ab"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Unz-gp-qJV">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="o1q-uF-pre"/>
+                    </connections>
+                </mapView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sfondo" translatesAutoresizingMaskIntoConstraints="NO" id="mlw-TO-Mln">
+                    <rect key="frame" x="0.0" y="425" width="320" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="mlw-TO-Mln" secondAttribute="height" multiplier="60:10" id="6tK-9U-rRe"/>
+                        <constraint firstAttribute="height" constant="55" id="KfW-ay-eVM"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="6tK-9U-rRe"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbM-8P-bhT" userLabel="mami">
+                    <rect key="frame" x="2" y="428" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="HRo-Sq-vtH"/>
+                        <constraint firstAttribute="height" constant="50" id="o9Q-1b-MHN"/>
+                    </constraints>
+                    <state key="normal" title="mamma" image="mamma"/>
+                    <connections>
+                        <action selector="selectCastelli:" destination="-1" eventType="touchUpInside" id="3Dd-6V-FVo"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Guk-BN-08a" userLabel="enri">
+                    <rect key="frame" x="205" y="428" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="RTi-BL-MJR"/>
+                        <constraint firstAttribute="height" constant="50" id="mEP-ZB-ySX"/>
+                    </constraints>
+                    <state key="normal" title="enrico" image="enrico"/>
+                    <connections>
+                        <action selector="selectCastelli:" destination="-1" eventType="touchUpInside" id="mOV-Od-jfg"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FK2-wp-Dyy" userLabel="anna">
+                    <rect key="frame" x="135" y="428" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="8Bp-Dc-Ho4"/>
+                        <constraint firstAttribute="height" constant="50" id="DcB-UB-0xE"/>
+                        <constraint firstAttribute="height" constant="50" id="dF0-eN-5I6"/>
+                        <constraint firstAttribute="width" constant="50" id="w3C-Y9-MWN"/>
+                    </constraints>
+                    <state key="normal" title="anna" image="anna"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="DcB-UB-0xE"/>
+                            <exclude reference="w3C-Y9-MWN"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="selectCastelli:" destination="-1" eventType="touchUpInside" id="YKX-n5-9A1"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7h-g0-Hyu" userLabel="papi">
+                    <rect key="frame" x="65" y="428" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="P7h-g0-Hyu" secondAttribute="height" multiplier="160:153" id="2Xa-Jo-ffL"/>
+                        <constraint firstAttribute="width" constant="50" id="Huc-1B-Z36"/>
+                        <constraint firstAttribute="height" constant="50" id="yIz-nc-4TR"/>
+                    </constraints>
+                    <state key="normal" title="papa'" image="papa'"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="2Xa-Jo-ffL"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="selectCastelli:" destination="-1" eventType="touchUpInside" id="pYH-Wa-l3A"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ds-oW-0WG" userLabel="laura">
+                    <rect key="frame" x="268" y="428" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="4k3-F6-Gyv"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Ank-8G-2aA"/>
+                        <constraint firstAttribute="height" constant="50" id="pPg-Ge-wYc"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="u7e-uj-s3T"/>
+                    </constraints>
+                    <state key="normal" title="laura" image="laura"/>
+                    <connections>
+                        <action selector="selectCastelli:" destination="-1" eventType="touchUpInside" id="ndP-0D-TP7"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Unz-gp-qJV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="0L0-nq-tyV"/>
+                <constraint firstAttribute="trailing" secondItem="Unz-gp-qJV" secondAttribute="trailing" id="0dF-ki-wUT"/>
+                <constraint firstAttribute="bottom" secondItem="Guk-BN-08a" secondAttribute="bottom" constant="2" id="27w-mG-3Xw"/>
+                <constraint firstItem="6Ds-oW-0WG" firstAttribute="leading" secondItem="Guk-BN-08a" secondAttribute="trailing" constant="8" id="4ie-4Y-Vzo"/>
+                <constraint firstAttribute="bottom" secondItem="mlw-TO-Mln" secondAttribute="bottom" id="AOT-r0-dnV"/>
+                <constraint firstAttribute="bottom" secondItem="Unz-gp-qJV" secondAttribute="bottom" id="AXg-AU-5cU"/>
+                <constraint firstAttribute="trailing" secondItem="mlw-TO-Mln" secondAttribute="trailing" id="AxE-wY-PKg"/>
+                <constraint firstItem="mlw-TO-Mln" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="C2V-Jt-tbR"/>
+                <constraint firstItem="Unz-gp-qJV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Dwk-2g-n1E"/>
+                <constraint firstItem="P7h-g0-Hyu" firstAttribute="leading" secondItem="gbM-8P-bhT" secondAttribute="trailing" constant="8" id="FHf-aW-MQX"/>
+                <constraint firstAttribute="bottom" secondItem="FK2-wp-Dyy" secondAttribute="bottom" constant="2" id="KgQ-rT-k3B"/>
+                <constraint firstItem="Guk-BN-08a" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="70" id="M6r-ZT-jh1"/>
+                <constraint firstItem="P7h-g0-Hyu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-70" id="Rf0-Hl-IIP"/>
+                <constraint firstAttribute="bottom" secondItem="P7h-g0-Hyu" secondAttribute="bottom" constant="2" id="SbM-3U-3je"/>
+                <constraint firstItem="FK2-wp-Dyy" firstAttribute="leading" secondItem="P7h-g0-Hyu" secondAttribute="trailing" constant="8" id="Su9-dH-2ib"/>
+                <constraint firstItem="FK2-wp-Dyy" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="T0E-3W-DDG"/>
+                <constraint firstItem="Guk-BN-08a" firstAttribute="leading" secondItem="FK2-wp-Dyy" secondAttribute="trailing" constant="8" id="Ud1-mE-E68"/>
+                <constraint firstAttribute="bottom" secondItem="6Ds-oW-0WG" secondAttribute="bottom" constant="2" id="fNf-3g-00d"/>
+                <constraint firstAttribute="trailing" secondItem="6Ds-oW-0WG" secondAttribute="trailing" constant="2" id="oqJ-WE-j59"/>
+                <constraint firstItem="gbM-8P-bhT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="2" id="qeP-FQ-vAI"/>
+                <constraint firstAttribute="bottom" secondItem="gbM-8P-bhT" secondAttribute="bottom" constant="2" id="rU2-eE-0WH"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="FHf-aW-MQX"/>
+                    <exclude reference="Su9-dH-2ib"/>
+                    <exclude reference="Ud1-mE-E68"/>
+                    <exclude reference="4ie-4Y-Vzo"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="147" y="229"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="anna" width="306" height="306"/>
+        <image name="enrico" width="306" height="306"/>
+        <image name="laura" width="306" height="306"/>
+        <image name="mamma" width="306" height="306"/>
+        <image name="papa'" width="306" height="306"/>
+        <image name="sfondo" width="500" height="900"/>
+    </resources>
+</document>

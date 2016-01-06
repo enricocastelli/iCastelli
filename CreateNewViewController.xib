@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateNewViewController">
+            <connections>
+                <outlet property="act" destination="wQg-u1-fQb" id="JVv-Mi-4Ym"/>
+                <outlet property="imageView" destination="9RR-rh-sT8" id="stC-u6-TvC"/>
+                <outlet property="loadButton" destination="WA1-8j-2aS" id="Lsf-a2-y73"/>
+                <outlet property="loadVideo" destination="FYj-Xt-Kb0" id="YMY-Nn-lLK"/>
+                <outlet property="messageField" destination="KqE-gu-xDx" id="akp-6R-ONJ"/>
+                <outlet property="playOverlay" destination="CJB-HN-nMk" id="xXW-ae-cSN"/>
+                <outlet property="postButton" destination="UA3-tB-tBS" id="70G-b7-sAn"/>
+                <outlet property="takeButton" destination="bzO-NO-hAW" id="Zis-Jw-8Lr"/>
+                <outlet property="videoButton" destination="Y9m-gi-7lF" id="d7e-3g-aTq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wood" translatesAutoresizingMaskIntoConstraints="NO" id="biP-Eu-ezu">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <gestureRecognizers/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzO-NO-hAW">
+                    <rect key="frame" x="8" y="236" width="107" height="36"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" title=" Scatta Foto ">
+                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="takePic:" destination="-1" eventType="touchUpInside" id="jdf-Wf-Sz2"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLx-OK-208">
+                    <rect key="frame" x="8" y="228" width="304" height="2"/>
+                    <color key="backgroundColor" red="1" green="0.64086602221887135" blue="0.45160296752265983" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="41I-hI-1nr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WA1-8j-2aS">
+                    <rect key="frame" x="206" y="236" width="106" height="36"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" title=" Carica Foto ">
+                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="loadPic:" destination="-1" eventType="touchUpInside" id="Li5-rs-lIR"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UA3-tB-tBS">
+                    <rect key="frame" x="128" y="236" width="65" height="65"/>
+                    <color key="backgroundColor" red="0.15294117647058825" green="0.60784313725490191" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="UA3-tB-tBS" secondAttribute="height" multiplier="1:1" id="tfT-Wo-Usz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="27"/>
+                    <state key="normal" title=" Post "/>
+                    <connections>
+                        <action selector="post:" destination="-1" eventType="touchUpInside" id="fE1-TL-DDy"/>
+                    </connections>
+                </button>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="wQg-u1-fQb">
+                    <rect key="frame" x="142" y="222" width="37" height="37"/>
+                    <color key="tintColor" red="0.1575867564" green="0.421537363" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="color" red="0.1575867564" green="0.421537363" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999996" contentMode="scaleToFill" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KqE-gu-xDx">
+                    <rect key="frame" x="8" y="80" width="304" height="140"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="140" id="vzV-pC-Ert"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="xep-CY-leT" appends="YES" id="OBh-ux-gYL"/>
+                    </connections>
+                </textView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9RR-rh-sT8">
+                    <rect key="frame" x="102" y="340" width="116" height="116"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="9RR-rh-sT8" secondAttribute="height" multiplier="1:1" id="7Ol-Ze-cxz"/>
+                        <constraint firstAttribute="height" constant="119" id="CpT-WS-5ll"/>
+                        <constraint firstAttribute="width" secondItem="9RR-rh-sT8" secondAttribute="height" multiplier="1:1" id="Way-xM-dcz"/>
+                        <constraint firstAttribute="width" secondItem="9RR-rh-sT8" secondAttribute="height" multiplier="1:1" id="c6i-Fg-J6g"/>
+                        <constraint firstAttribute="width" constant="119" id="w3f-hC-g74"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="CpT-WS-5ll"/>
+                            <exclude reference="Way-xM-dcz"/>
+                            <exclude reference="c6i-Fg-J6g"/>
+                            <exclude reference="w3f-hC-g74"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9m-gi-7lF">
+                    <rect key="frame" x="16" y="271" width="47" height="36"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" title="Video"/>
+                    <connections>
+                        <action selector="videoVai:" destination="-1" eventType="touchUpInside" id="VR2-vC-Kem"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play-icon" translatesAutoresizingMaskIntoConstraints="NO" id="CJB-HN-nMk">
+                    <rect key="frame" x="135" y="420" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="as9-fx-Skx"/>
+                        <constraint firstAttribute="width" constant="50" id="kw7-hu-jOa"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYj-Xt-Kb0">
+                    <rect key="frame" x="201" y="271" width="111" height="36"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" title=" Carica Video">
+                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="loadVideo:" destination="-1" eventType="touchUpInside" id="21f-3Y-YDr"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="9RR-rh-sT8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2Eh-j2-jTO"/>
+                <constraint firstItem="wQg-u1-fQb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4Zv-oO-CIu"/>
+                <constraint firstItem="KqE-gu-xDx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="6RR-Do-2jR"/>
+                <constraint firstItem="CJB-HN-nMk" firstAttribute="top" secondItem="KqE-gu-xDx" secondAttribute="bottom" constant="200" id="6sz-KV-hai"/>
+                <constraint firstItem="ZLx-OK-208" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="872-Ol-7b3"/>
+                <constraint firstItem="9RR-rh-sT8" firstAttribute="top" secondItem="biP-Eu-ezu" secondAttribute="bottom" id="Ca0-Dz-9xp"/>
+                <constraint firstItem="wQg-u1-fQb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="DMU-n0-nTE"/>
+                <constraint firstItem="CJB-HN-nMk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Dlw-vE-oYe"/>
+                <constraint firstItem="wQg-u1-fQb" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="I5R-gt-2s0"/>
+                <constraint firstAttribute="trailing" secondItem="FYj-Xt-Kb0" secondAttribute="trailing" constant="8" id="L4O-OI-l9y"/>
+                <constraint firstItem="ZLx-OK-208" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="LIa-7c-dx2"/>
+                <constraint firstItem="Y9m-gi-7lF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="OCw-GY-gJi"/>
+                <constraint firstAttribute="trailing" secondItem="KqE-gu-xDx" secondAttribute="trailing" constant="8" id="QqQ-kv-bb1"/>
+                <constraint firstItem="WA1-8j-2aS" firstAttribute="top" secondItem="KqE-gu-xDx" secondAttribute="bottom" constant="16" id="RBn-rN-0m0"/>
+                <constraint firstItem="9RR-rh-sT8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="RLg-LH-VlN"/>
+                <constraint firstItem="9RR-rh-sT8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="456" id="TeV-Kc-yaX"/>
+                <constraint firstItem="Y9m-gi-7lF" firstAttribute="top" secondItem="ZLx-OK-208" secondAttribute="bottom" constant="41" id="U2I-t9-Sgp"/>
+                <constraint firstItem="Y9m-gi-7lF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="UaF-fk-Ce8"/>
+                <constraint firstItem="biP-Eu-ezu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="WCf-yP-hzS"/>
+                <constraint firstItem="ZLx-OK-208" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="244" id="WsA-Ia-jMe"/>
+                <constraint firstItem="9RR-rh-sT8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="200" id="aPe-ub-Ga4"/>
+                <constraint firstItem="bzO-NO-hAW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="dFm-9Y-CP1"/>
+                <constraint firstItem="KqE-gu-xDx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="dJ6-Zj-9H7"/>
+                <constraint firstItem="Y9m-gi-7lF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="65" id="gWh-bR-8kN"/>
+                <constraint firstItem="UA3-tB-tBS" firstAttribute="top" secondItem="KqE-gu-xDx" secondAttribute="bottom" constant="16" id="kDY-O5-Qbm"/>
+                <constraint firstAttribute="trailing" secondItem="biP-Eu-ezu" secondAttribute="trailing" id="kMd-Sa-bVO"/>
+                <constraint firstAttribute="trailing" secondItem="WA1-8j-2aS" secondAttribute="trailing" constant="8" id="lL7-Tr-ifT"/>
+                <constraint firstAttribute="trailing" secondItem="ZLx-OK-208" secondAttribute="trailing" constant="8" id="m2j-Xp-bba"/>
+                <constraint firstAttribute="bottom" secondItem="biP-Eu-ezu" secondAttribute="bottom" id="mkc-f2-ljx"/>
+                <constraint firstItem="9RR-rh-sT8" firstAttribute="top" secondItem="UA3-tB-tBS" secondAttribute="bottom" constant="24" id="niI-Zi-61i"/>
+                <constraint firstItem="9RR-rh-sT8" firstAttribute="top" secondItem="KqE-gu-xDx" secondAttribute="bottom" constant="120" id="o0x-HL-lJL"/>
+                <constraint firstItem="ZLx-OK-208" firstAttribute="top" secondItem="KqE-gu-xDx" secondAttribute="bottom" constant="8" id="qEi-GH-SKT"/>
+                <constraint firstItem="9RR-rh-sT8" firstAttribute="top" secondItem="UA3-tB-tBS" secondAttribute="bottom" constant="30" id="rRH-kw-rll"/>
+                <constraint firstItem="UA3-tB-tBS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sda-cW-vNt"/>
+                <constraint firstItem="biP-Eu-ezu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tX7-0Z-gwI"/>
+                <constraint firstItem="bzO-NO-hAW" firstAttribute="top" secondItem="KqE-gu-xDx" secondAttribute="bottom" constant="16" id="vBr-Gi-bPs"/>
+                <constraint firstItem="FYj-Xt-Kb0" firstAttribute="top" secondItem="ZLx-OK-208" secondAttribute="bottom" constant="41" id="wAo-M2-SAS"/>
+                <constraint firstAttribute="bottom" secondItem="9RR-rh-sT8" secondAttribute="bottom" constant="24" id="y07-UP-yC1"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="WsA-Ia-jMe"/>
+                    <exclude reference="UaF-fk-Ce8"/>
+                    <exclude reference="gWh-bR-8kN"/>
+                    <exclude reference="Ca0-Dz-9xp"/>
+                    <exclude reference="RLg-LH-VlN"/>
+                    <exclude reference="TeV-Kc-yaX"/>
+                    <exclude reference="aPe-ub-Ga4"/>
+                    <exclude reference="niI-Zi-61i"/>
+                    <exclude reference="rRH-kw-rll"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="133" y="234"/>
+        </view>
+        <swipeGestureRecognizer direction="down" id="xep-CY-leT">
+            <connections>
+                <action selector="dismissKeyboardSwipe:" destination="-1" id="axy-4k-4re"/>
+            </connections>
+        </swipeGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="play-icon" width="256" height="256"/>
+        <image name="wood" width="640" height="960"/>
+    </resources>
+</document>

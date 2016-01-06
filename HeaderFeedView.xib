@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedViewController"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="news da i Castelli" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6R-Ru-riN">
+                    <rect key="frame" x="77" y="20" width="167" height="28"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="23"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqw-TK-P7B">
+                    <rect key="frame" x="0.0" y="78" width="320" height="3"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="3" id="8WO-N1-KkC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ovl-vw-dVP">
+                    <rect key="frame" x="135" y="53" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="BXL-mz-p11"/>
+                        <constraint firstAttribute="height" constant="50" id="JQW-NF-lfd"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="E6R-Ru-riN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="1BV-Cn-Ws1"/>
+                <constraint firstItem="iqw-TK-P7B" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="160" id="5NX-SB-th5"/>
+                <constraint firstItem="E6R-Ru-riN" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="7YT-f8-soH"/>
+                <constraint firstItem="iqw-TK-P7B" firstAttribute="top" secondItem="E6R-Ru-riN" secondAttribute="bottom" constant="2" id="BQU-mH-a6D"/>
+                <constraint firstItem="iqw-TK-P7B" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="E3L-gb-3Uk"/>
+                <constraint firstItem="iqw-TK-P7B" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="F6V-z8-0on"/>
+                <constraint firstItem="Ovl-vw-dVP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Qvt-X0-Ko0"/>
+                <constraint firstItem="Ovl-vw-dVP" firstAttribute="top" secondItem="E6R-Ru-riN" secondAttribute="bottom" constant="5" id="R5n-cK-fUG"/>
+                <constraint firstItem="iqw-TK-P7B" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="TVE-aM-m4Y"/>
+                <constraint firstItem="iqw-TK-P7B" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="UNH-Yd-CwJ"/>
+                <constraint firstItem="iqw-TK-P7B" firstAttribute="top" secondItem="E6R-Ru-riN" secondAttribute="bottom" constant="30" id="cKD-8r-TYf"/>
+                <constraint firstItem="E6R-Ru-riN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="pyA-Cv-cId"/>
+                <constraint firstAttribute="trailing" secondItem="iqw-TK-P7B" secondAttribute="trailing" id="v3T-YW-R3h"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="5NX-SB-th5"/>
+                    <exclude reference="BQU-mH-a6D"/>
+                    <exclude reference="E3L-gb-3Uk"/>
+                    <exclude reference="F6V-z8-0on"/>
+                    <exclude reference="UNH-Yd-CwJ"/>
+                    <exclude reference="1BV-Cn-Ws1"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="238" y="128.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo" width="712" height="701"/>
+    </resources>
+</document>
